@@ -10,7 +10,7 @@ public class MovieRecommenderSystemApplication {
 
     public static void main(String[] args) {
         SpringApplication.run(MovieRecommenderSystemApplication.class, args);
-        RecommenderImplementation recommended = new RecommenderImplementation();
+        RecommenderImplementation recommended = new RecommenderImplementation(new CollaborativeFilter());
         String[] results = recommended.recommendMovies("Finding Dorry");
         System.out.println(Arrays.toString(results));
     }
