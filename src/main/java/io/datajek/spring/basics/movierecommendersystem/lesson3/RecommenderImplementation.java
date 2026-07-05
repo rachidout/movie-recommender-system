@@ -13,6 +13,7 @@ public class RecommenderImplementation {
   }
     public String[] recommendMovies(String movie) {
        String[] results = filter.getRecommendations(movie);
+       System.out.println("the filter used is " + filter.getClass().getName());
        return results;
     }
 }
